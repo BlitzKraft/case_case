@@ -10,7 +10,7 @@ Case wall thickness = 3mm
 use <rounded_cubes/round_cube.scad>
 
 module keyboard() {
-	length = 270;
+	length = 295.3;
 	width = 110;
 	height = 30;
 	// For centering
@@ -25,25 +25,25 @@ module keyboard() {
 
 difference() {
 	translate([0, 0, -2.7])
-	scale([1.01, 1.04, 1])
+	scale([1.016, 1.04, 1])
 	keyboard();
 	keyboard();
 	}
 
 difference() {
 	translate([0, -54, -17.731])
-	scale([1.01, 1.2, 1.51])
+	scale([1.016, 1.2, 1.51])
 	scale([1, 1, 1/3])
 	intersection() {
 		intersection() { 
 			translate([-150, -70, 0])
 			round_cube([300, 80, 80]);
 			rotate([0, 90, 0])
-			cylinder(r=30, h=270, center=true, $fn=90);
+			cylinder(r=30, h=295.3, center=true, $fn=90);
 		}
 		scale([1, 1, 3/1.51])
-		translate([-135, -60, 0])
-		round_cube([270, 80, 80], radius=3, $fn=90);
+		translate([-147.65, -60, 0])
+		round_cube([295.3, 80, 80], radius=3, $fn=90);
 	}
 	keyboard();
 }
